@@ -12,14 +12,14 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     color: #222;
+    background: #fff7f0;
 }
 
 /* HERO */
 .hero {
-    height: 90vh;
+    height: 85vh;
     background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') center/cover;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -65,32 +65,56 @@ body {
     text-align: center;
 }
 
-/* MENU */
+h2 {
+    color: #e63946;
+}
+
+/* FOOD GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
 }
 
 .card {
+    background: white;
     border-radius: 12px;
     overflow: hidden;
-    background: white;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 .card img {
     width: 100%;
-    height: 160px;
+    height: 180px;
     object-fit: cover;
 }
 
+.card h3 {
+    margin: 10px 0 5px;
+}
+
 .card p {
-    padding: 15px;
-    margin: 0;
-    font-weight: 500;
+    font-size: 13px;
+    padding: 0 15px 15px;
+    color: #444;
+}
+
+/* WHY CHOOSE US */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.feature {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* REVIEWS */
@@ -98,8 +122,9 @@ body {
     max-width: 600px;
     margin: 15px auto;
     padding: 20px;
-    background: #fff7f0;
+    background: white;
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 /* FOOTER */
@@ -127,40 +152,70 @@ footer {
 
 <!-- MENU -->
 <div class="section">
-    <h2>🌮 Popular Dishes</h2>
+    <h2>🌮 Menu With Details</h2>
 
     <div class="grid">
 
         <div class="card">
             <img src="https://images.unsplash.com/photo-1604908177522-040a4b6a0b6f">
-            <p>Street Tacos</p>
+            <h3>Street Tacos</h3>
+            <p>
+            Ingredients: corn tortilla, beef/chicken, onion, cilantro, lime<br>
+            Calories: 210 | Protein: 14g | Sugar: 1g
+            </p>
         </div>
 
         <div class="card">
             <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
-            <p>Chicken Enchiladas</p>
+            <h3>Chicken Enchiladas</h3>
+            <p>
+            Ingredients: chicken, tortilla, cheese, red sauce<br>
+            Calories: 420 | Protein: 28g | Sugar: 3g
+            </p>
         </div>
 
         <div class="card">
             <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38">
-            <p>Quesadillas</p>
+            <h3>Quesadillas</h3>
+            <p>
+            Ingredients: flour tortilla, cheese, chicken<br>
+            Calories: 380 | Protein: 22g | Sugar: 2g
+            </p>
         </div>
 
         <div class="card">
             <img src="https://images.unsplash.com/photo-1625944525533-473f3d1b6d7b">
-            <p>Burritos</p>
+            <h3>Burritos</h3>
+            <p>
+            Ingredients: tortilla, rice, beans, meat, cheese<br>
+            Calories: 550 | Protein: 30g | Sugar: 4g
+            </p>
         </div>
 
     </div>
 </div>
 
+<!-- WHY CHOOSE US -->
+<div class="section">
+    <h2>⭐ Why Choose Tres Agaves?</h2>
+
+    <div class="features">
+        <div class="feature">🔥 Fresh ingredients made daily</div>
+        <div class="feature">🍽️ Big portions at affordable prices</div>
+        <div class="feature">👨‍🍳 Authentic Mexican recipes</div>
+        <div class="feature">⚡ Fast & friendly service</div>
+        <div class="feature">🏆 Local favorite in De Queen</div>
+        <div class="feature">📱 Easy online ordering</div>
+    </div>
+</div>
+
 <!-- REVIEWS -->
 <div class="section">
-    <h2>⭐ Reviews</h2>
+    <h2>⭐ Customer Reviews</h2>
 
-    <div class="review">“Best Mexican food in town. Always fresh and fast!” ⭐⭐⭐⭐⭐</div>
-    <div class="review">“Huge portions and amazing flavor. We come weekly.” ⭐⭐⭐⭐⭐</div>
-    <div class="review">“Friendly staff and great atmosphere.” ⭐⭐⭐⭐⭐</div>
+    <div class="review">“Best Mexican food in town. Always fresh!” ⭐⭐⭐⭐⭐</div>
+    <div class="review">“Huge portions and amazing flavor.” ⭐⭐⭐⭐⭐</div>
+    <div class="review">“Fast service and super friendly staff.” ⭐⭐⭐⭐⭐</div>
 </div>
 
 <!-- LOCATION -->
