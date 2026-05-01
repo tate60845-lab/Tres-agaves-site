@@ -8,226 +8,182 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    color: #222;
-    background: #fff7f0;
+  margin: 0;
+  font-family: Poppins;
+  background: #fff7f0;
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #e63946;
+  padding: 12px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* HERO */
 .hero {
-    height: 85vh;
-    background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    position: relative;
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
 }
 
 .hero::after {
-    content: "";
-    position: absolute;
-    top:0; left:0; right:0; bottom:0;
-    background: rgba(0,0,0,0.55);
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
-    font-size: 60px;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 22px;
+  font-size: 60px;
+  margin: 0;
 }
 
 .btn {
-    margin: 10px;
-    padding: 12px 22px;
-    background: #e63946;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  background: #e63946;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* SECTIONS */
 .section {
-    padding: 70px 20px;
-    text-align: center;
+  padding: 80px 20px;
+  text-align: center;
 }
 
-h2 {
-    color: #e63946;
-}
-
-/* FOOD GRID */
+/* MENU */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-    max-width: 1100px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.card h3 {
-    margin: 10px 0 5px;
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
 }
 
 .card p {
-    font-size: 13px;
-    padding: 0 15px 15px;
-    color: #444;
-}
-
-/* WHY CHOOSE US */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    max-width: 900px;
-    margin: auto;
-}
-
-.feature {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 10px;
+  font-size: 14px;
 }
 
 /* REVIEWS */
 .review {
-    max-width: 600px;
-    margin: 15px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  background: white;
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 10px;
 }
 
 /* FOOTER */
 footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 30px;
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 25px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-    <div class="hero-content">
-        <h1>Tres Agaves</h1>
-        <p>Authentic Mexican Food in De Queen, Arkansas</p>
-
-        <a class="btn" href="tel:+18706426449">📞 Call Now</a>
-        <a class="btn" href="https://tresagavesar.square.site">🛒 Order Online</a>
-    </div>
+<!-- NAV -->
+<div class="nav">
+  <a href="#home">Home</a>
+  <a href="#menu">Menu</a>
+  <a href="#reviews">Reviews</a>
 </div>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Tres Agaves</h1>
+    <p>Authentic Mexican Food in De Queen</p>
+
+    <a class="btn" href="tel:+18706426449">📞 Call Now</a>
+    <a class="btn" href="#menu">🍽️ View Menu</a>
+  </div>
+</section>
 
 <!-- MENU -->
-<div class="section">
-    <h2>🌮 Menu With Details</h2>
+<section id="menu" class="section">
+  <h2>🌮 Menu</h2>
 
-    <div class="grid">
+  <div class="grid">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1604908177522-040a4b6a0b6f">
-            <h3>Street Tacos</h3>
-            <p>
-            Ingredients: corn tortilla, beef/chicken, onion, cilantro, lime<br>
-            Calories: 210 | Protein: 14g | Sugar: 1g
-            </p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
-            <h3>Chicken Enchiladas</h3>
-            <p>
-            Ingredients: chicken, tortilla, cheese, red sauce<br>
-            Calories: 420 | Protein: 28g | Sugar: 3g
-            </p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38">
-            <h3>Quesadillas</h3>
-            <p>
-            Ingredients: flour tortilla, cheese, chicken<br>
-            Calories: 380 | Protein: 22g | Sugar: 2g
-            </p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1625944525533-473f3d1b6d7b">
-            <h3>Burritos</h3>
-            <p>
-            Ingredients: tortilla, rice, beans, meat, cheese<br>
-            Calories: 550 | Protein: 30g | Sugar: 4g
-            </p>
-        </div>
-
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1604908177522-040a4b6a0b6f">
+      <p>Street Tacos - $2.50<br>Protein 14g | 210 cal</p>
     </div>
-</div>
 
-<!-- WHY CHOOSE US -->
-<div class="section">
-    <h2>⭐ Why Choose Tres Agaves?</h2>
-
-    <div class="features">
-        <div class="feature">🔥 Fresh ingredients made daily</div>
-        <div class="feature">🍽️ Big portions at affordable prices</div>
-        <div class="feature">👨‍🍳 Authentic Mexican recipes</div>
-        <div class="feature">⚡ Fast & friendly service</div>
-        <div class="feature">🏆 Local favorite in De Queen</div>
-        <div class="feature">📱 Easy online ordering</div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
+      <p>Enchiladas - $10.99<br>Protein 28g | 420 cal</p>
     </div>
-</div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38">
+      <p>Quesadillas - $8.99<br>Protein 22g | 380 cal</p>
+    </div>
+
+  </div>
+</section>
 
 <!-- REVIEWS -->
-<div class="section">
-    <h2>⭐ Customer Reviews</h2>
+<section id="reviews" class="section">
+  <h2>⭐ Reviews</h2>
 
-    <div class="review">“Best Mexican food in town. Always fresh!” ⭐⭐⭐⭐⭐</div>
-    <div class="review">“Huge portions and amazing flavor.” ⭐⭐⭐⭐⭐</div>
-    <div class="review">“Fast service and super friendly staff.” ⭐⭐⭐⭐⭐</div>
-</div>
+  <div class="review">“Best Mexican food in town!” ⭐⭐⭐⭐⭐</div>
+  <div class="review">“Huge portions and amazing flavor.” ⭐⭐⭐⭐⭐</div>
+  <div class="review">“Fast service and friendly staff.” ⭐⭐⭐⭐⭐</div>
+</section>
 
-<!-- LOCATION -->
-<div class="section">
-    <h2>📍 Visit Us</h2>
-    <p>140 US-71, De Queen, AR</p>
-    <p><a href="tel:+18706426449">(870) 642-6449</a></p>
-    <p>Open Daily · Closes 9 PM</p>
-</div>
-
+<!-- FOOTER -->
 <footer>
-    © 2026 Tres Agaves Mexican Restaurant
+  © 2026 Tres Agaves Mexican Restaurant
 </footer>
 
 </body>
