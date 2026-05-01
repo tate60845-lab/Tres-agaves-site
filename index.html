@@ -11,23 +11,24 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    background: #fff7f0;
     color: #333;
 }
 
-/* HERO SECTION */
-.hero {
-    background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') center/cover;
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #e63946, #f77f00);
     color: white;
     text-align: center;
-    padding: 120px 20px;
+    padding: 90px 20px;
 }
 
-.hero h1 {
+header h1 {
     font-size: 52px;
     margin: 0;
 }
 
-.hero p {
+header p {
     font-size: 20px;
     margin: 10px 0 20px;
 }
@@ -35,11 +36,11 @@ body {
 .btn {
     padding: 12px 20px;
     margin: 5px;
-    background: #e63946;
-    color: white;
+    background: white;
+    color: #e63946;
     text-decoration: none;
-    border-radius: 6px;
-    display: inline-block;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
 /* SECTIONS */
@@ -49,23 +50,34 @@ body {
 }
 
 h2 {
-    margin-bottom: 20px;
+    color: #e63946;
 }
 
-/* MENU CARDS */
+/* MENU */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     max-width: 900px;
     margin: auto;
 }
 
 .card {
-    background: #f5f5f5;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-weight: 500;
+}
+
+/* REVIEWS */
+.review {
+    background: white;
+    max-width: 600px;
+    margin: 10px auto;
     padding: 20px;
     border-radius: 10px;
-    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* FOOTER */
@@ -80,39 +92,51 @@ footer {
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
+<header>
     <h1>Tres Agaves</h1>
     <p>Authentic Mexican Food in De Queen, Arkansas</p>
 
-    <a class="btn" href="tel:+18706426449">Call Now</a>
-    <a class="btn" href="https://tresagavesar.square.site">Order Online</a>
-</div>
+    <a class="btn" href="tel:+18706426449">📞 Call Now</a>
+    <a class="btn" href="https://tresagavesar.square.site">🛒 Order Online</a>
+</header>
 
 <!-- MENU -->
 <div class="section">
-    <h2>Popular Dishes</h2>
+    <h2>🌮 Menu & Prices</h2>
 
     <div class="grid">
-        <div class="card">🌮 Street Tacos Al Pastor</div>
-        <div class="card">🧀 Chicken Quesadillas</div>
-        <div class="card">🍗 Enchiladas</div>
-        <div class="card">🥑 Chips & Salsa</div>
+        <div class="card">Street Tacos - $2.50 each</div>
+        <div class="card">Quesadillas - $8.99</div>
+        <div class="card">Chicken Enchiladas - $10.99</div>
+        <div class="card">Burrito - $9.99</div>
+        <div class="card">Chips & Salsa - $3.99</div>
+        <div class="card">Fajitas - $13.99</div>
     </div>
 </div>
 
-<!-- ABOUT -->
+<!-- REVIEWS -->
 <div class="section">
-    <h2>Why People Love Us</h2>
-    <p>Fresh food, fast service, and a local favorite in De Queen.</p>
+    <h2>⭐ Customer Reviews</h2>
+
+    <div class="review">
+        “Best Mexican food I’ve ever had. Service was amazing!” ⭐⭐⭐⭐⭐
+    </div>
+
+    <div class="review">
+        “Fresh food, great atmosphere, highly recommend!” ⭐⭐⭐⭐⭐
+    </div>
+
+    <div class="review">
+        “Fast service and huge portions. We always come back.” ⭐⭐⭐⭐⭐
+    </div>
 </div>
 
-<!-- LOCATION -->
+<!-- INFO -->
 <div class="section">
-    <h2>Visit Us</h2>
+    <h2>📍 Visit Us</h2>
     <p>140 US-71, De Queen, AR</p>
+    <p>📞 <a href="tel:+18706426449">(870) 642-6449</a></p>
     <p>Open Daily · Closes 9 PM</p>
-    <p>(870) 642-6449</p>
 </div>
 
 <footer>
